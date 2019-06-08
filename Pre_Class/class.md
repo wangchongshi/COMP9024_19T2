@@ -17,8 +17,6 @@ label:
 * https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 * https://people.ok.ubc.ca/ylucet/DS/
 
-Clion
-
 ## Git Command
 * Why we use git
 * git command
