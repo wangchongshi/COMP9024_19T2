@@ -1,3 +1,5 @@
+https://github.com/marey/COMP9024_19T2
+
 ## Learning Resources
 * Algorithms in C, Parts 1-4, Robert Sedgewick
 * Algorithms in C, Part 5, Robert Sedgewick
