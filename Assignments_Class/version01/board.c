@@ -59,3 +59,6 @@ bool canSolve(board start, board goal) {
 	if (start.parity % 2 == goal.parity % 2) return true;
 	return false;
 }
+
+
+fgets

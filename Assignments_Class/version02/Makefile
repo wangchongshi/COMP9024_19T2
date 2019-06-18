@@ -1,9 +1,15 @@
-puzzle:boardADT.o puzzle.o
-	./dcc/dcc puzzle.o boardADT.o -o puzzle
+# command and parameters for the programme compile
+CC=dcc
+CFLAGS=-O3
 
-puzzle.o:puzzle.c
-	./dcc/dcc -c puzzle.c
+all: board.o puzzle.o
 
-boardADT.o:boardADT.c
-	./dcc/dcc -c boardADT.c
+board.o: boardADT.c boardADT.h
+     $(CC) $(CFLAGS) -o board.o boardADT.c
+
+puzzle.o: puzzle.c boardADT.h
+     $(CC) $(CFLAGS) -o puzzle.o puzzle.c
+
+clean:
+     rm -f puzzle *.o core *.gch
 
