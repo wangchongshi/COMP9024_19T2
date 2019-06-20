@@ -1,17 +1,18 @@
 # command and parameters for the programme compile
 CC=dcc
-CFLAGS=-O3
+CFLAGS=-c
+all: puzzle
 
-all: board.o puzzle.o
+puzzle: boardADT.o puzzle.o
 
-board.o: boardADT.c boardADT.h
-    $(CC) $(CFLAGS) -o board.o boardADT.c
+boardADT.o: boardADT.c boardADT.h
+	$(CC) $(CFLAGS) boardADT.c
 
 puzzle.o: puzzle.c boardADT.h
-    $(CC) $(CFLAGS) -o puzzle.o puzzle.c
+	$(CC) $(CFLAGS) puzzle.c
 
 clean:
-     rm -f puzzle *.o core *.gch
+	rm -f puzzle *.o core *.gch
 
 
 
