@@ -13,3 +13,5 @@ puzzle.o: puzzle.c boardADT.h
 clean:
      rm -f puzzle *.o core *.gch
 
+
+
