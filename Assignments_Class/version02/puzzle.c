@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
     // check boards valid
     if (!valid_board(start_board) || !valid_board(end_board) ||
         length(start_board) != length(end_board))
-        printf("#Err\n");
+        printf("input error\n");
     else {
         // check boards solvable
         if (check_solvable_boards(start_board, end_board))
@@ -53,16 +53,3 @@ int main(int argc, char **argv) {
     // return
     return EXIT_SUCCESS;
 }
-/*
-bad
-1 2 3 1
-1 2 3 b
-
-sol
-9 12 5 4 2 b 7 11 3 6 10 13 14 1 8 15
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 b 15
-
-unsol
-2 1 3 b
-1 2 3 b
-*/
