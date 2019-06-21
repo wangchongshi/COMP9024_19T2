@@ -41,7 +41,7 @@ do
 
         file_name=$(basename "$file" .inp)
 
-        ./$BIN < "$file" | head -500 > tests/$file_name.temp
+        ./$BIN < "$file" | head -500 > Tests/$file_name.temp
      	echo " "
      	echo " "
      	echo "------------------------------ "
