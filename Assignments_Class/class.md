@@ -1,3 +1,6 @@
+
+    https://github.com/marey/COMP9024_19T2
+
 # Tutorial 内容讲解
 
 # 开发代码讲解
@@ -32,6 +35,11 @@
 5.malloc以及free
 
 # Makefile 讲解
+## Makefile的作用
+
+    Makefile文件描述了整个工程的编译、链接规则，其中包括：工程中哪些源文件需要编辑以及如何编译，需要创建哪些库文件已经如何创建这些库文件，如何产生期望得到的最终可执行的文件。
+    
+    Makefile文件还描述了工程中所有文件的编译顺序，编译规则，make根据这些规则来编译工程。
 ## dcc 与 gcc 的区别
 ## 常见Makefile编译错误
 ### Makefile:6: *** missing separator.  Stop.
@@ -41,7 +49,6 @@
 
 # C 语言调试
 ## C语言风格(C style)
-## 
 ## 调试的重要性
 ## 在Clion里debug代码
 
