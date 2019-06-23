@@ -34,8 +34,10 @@ int main(int argc, char **argv) {
 
     // check boards valid
     if (!valid_board(start_board) || !valid_board(end_board) ||
-        length(start_board) != length(end_board))
+        length(start_board) != length(end_board)) {
         printf("input error\n");
+        return EXIT_FAILURE;
+    }
     else {
         // check boards solvable
         if (check_solvable_boards(start_board, end_board))
