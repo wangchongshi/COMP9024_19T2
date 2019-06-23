@@ -2,26 +2,26 @@
 // Created by Rui.Mu on 2019-06-13.
 //
 #include <stdio.h>
+#include <stdlib.h>
+#include "list.h"
 
-struct Test1 {
-    char v_char;
-    int v_int;
-    char *v_pointer;
-};
+int main(int argc, char **argv) {
 
-struct Test2 {
-    char v_char;
-    char *v_pointer;
-    int v_int;
-};
+    // 1->2->3->4->NULL
+    // [1,2,3,4]
+    // NULL<-1<->2<->3<->4->NUL
 
-int main() {
+    // init
+    // insert
+    // delete
+    // update
+    // free
+    // search
+    // sort
 
-    struct Test1 test1;
 
-    struct Test1 test2;
-
-    printf("size of v_char is:%d,size of v_int is:%d ,size of v_pointer is:%d  ",
-           sizeof(test1.v_char),sizeof(test1.v_int), sizeof(test1.v_pointer));
+    printf("%d \n",argc);
+    printf("%s \n",argv[0]);
+    printf("%s \n",argv[1]);
 
 }

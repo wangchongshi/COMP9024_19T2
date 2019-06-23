@@ -9,20 +9,37 @@
 #define SIZEBYTES 5
 #define S(x)    sizeof(x)  // this is a C macro that is substituted by the preprocessor
 // I use it in the program just to save line-length space
+// char c
 struct s1 {
-    char  c;
-    int   i;
-    char *s;
+    // 0x00000000
+    // padding
+    char  c; // 1->4 1bytes
+    int   i; // 4 bytes
+    char *s; // 8 bytes
+    struct s1 *next;
 };
 struct s2 {
-    char  c;
-    char *s;
-    int   i;
+    char  c; // 1  1->8 bytes
+    char *s; // 8  8
+    int   i; // 4  4->8
+    struct s2 *next;
+    int *p;
+};
+
+struct s3 {
+    char  c;  // 1
+    char  c1; // 1 1->3
+    int   i;  // 4
+    char *s;  // 8
 };
 
 int main() {
 
     struct s1 a;
+    &a.c;
+    struct s1 *aa;
+    aa->c
+
     struct s2 b;
 
     printf("sizeof(a.c)=%lu, sizeof(a.i)=%lu, sizeof(a.s)=%lu\n", S(a.c), S(a.i), S(a.s));
