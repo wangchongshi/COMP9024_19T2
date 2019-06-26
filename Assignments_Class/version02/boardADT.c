@@ -41,6 +41,7 @@ Board create_board(char *line) {
         board->length = 0;
         board->board_size = 0;
         board->elements = NULL;
+
         // check line is null
         if (line != NULL) {
             // loop elements

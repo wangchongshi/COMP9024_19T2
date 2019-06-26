@@ -25,6 +25,7 @@ int main(int argc, char **argv) {
     char *goal_line = malloc(sizeof(char) * SIZE);
     fgets(start_line, SIZE, stdin);
     fgets(goal_line, SIZE, stdin);
+
     printf("start: %s", start_line);
     printf("goal: %s", goal_line);
 
@@ -37,8 +38,7 @@ int main(int argc, char **argv) {
         length(start_board) != length(end_board)) {
         printf("input error\n");
         return EXIT_FAILURE;
-    }
-    else {
+    } else {
         // check boards solvable
         if (check_solvable_boards(start_board, end_board))
             printf("solvable\n");
@@ -49,8 +49,8 @@ int main(int argc, char **argv) {
     // free the memories
     free_board(start_board);
     free_board(end_board);
-    free(start_line);
-    free(goal_line);
+    // free(start_line);
+    // free(goal_line);
 
     // return
     return EXIT_SUCCESS;
