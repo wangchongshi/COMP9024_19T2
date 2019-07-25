@@ -19,6 +19,7 @@ struct _list {
 
     Node *header;   // 4
     Node *tail;     // 4
+    Node *current;
     int length;     // 4
 
 };

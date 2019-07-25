@@ -24,17 +24,7 @@ typedef struct DLListNode {
     // pointer to next node in list
 } DLListNode;
 
-
 typedef struct DLListNode *DLListNodeP;
-
-
-0x000001 (DLListNode)
-
-node->value = 1;
-node->exe
-
-
-
 
 typedef struct DLListRep {
 	int  nitems;      // count of items in list
@@ -44,7 +34,6 @@ typedef struct DLListRep {
 } DLListRep;
 
 typedef struct DLListRep *DLList;
-
 
 /* creates a new DLListNode, with a given val  */
 DLListNode *newDLListNode(int val);

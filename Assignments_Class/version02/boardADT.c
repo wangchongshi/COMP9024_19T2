@@ -34,7 +34,7 @@ struct struct_board {
  */
 Board create_board(char *line) {
     // malloc data
-    Board board = malloc(sizeof(struct struct_board));
+    Board board = malloc(sizeof(board));
     // check null
     if (board != NULL) {
         // init status

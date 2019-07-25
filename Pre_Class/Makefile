@@ -6,4 +6,7 @@ window
 mac.out:
 	mac.c
 
+
+
 windows.out:
+

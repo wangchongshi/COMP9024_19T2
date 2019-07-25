@@ -19,13 +19,33 @@
     
 */
 
-DLList getPeaks(DLList L){
+DLList getPeaks(DLList L) {
 
-	DLList peaksL = newDLList();
+    DLList peaksL = newDLList();
 
-	// your solution here ... 
+    // your solution here ...
+    if (DLListLength(peaksL) > 2) {
 
-	return peaksL;
+        DLListNodeP first = L->first;
+        DLListNodeP second = first->next;
+        DLListNodeP third = second->next;
+        while (third != NULL) {
+            if (first->value < second->value && second->value > third->value) {
+                DLListNodeP new_node = newDLListNode(second->value);
+                if (peaksL->first == NULL) {
+                    peaksL->first = peaksL->last = new_node;
+                    peaksL->nitems++;
+                } else {
+                    peaksL->last->next = new_node;
+                    peaksL->last = new_node;
+                    peaksL->nitems++;
+                }
+
+            }
+        }
+    }
+
+    return peaksL;
 
 }
 

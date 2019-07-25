@@ -19,7 +19,7 @@
  * @param argv parameters
  * @return result of programme
  */
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
     // define and read the start and goal line from stdin
     char *start_line = malloc(sizeof(char) * SIZE);
     char *goal_line = malloc(sizeof(char) * SIZE);

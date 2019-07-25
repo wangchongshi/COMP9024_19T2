@@ -21,12 +21,42 @@
 */
 
 
-int subsetList(DLList L1, DLList L2){
+int subsetList(DLList L1, DLList L2) {
 
-	/* 
-	   Your solution here 
+    /*
+       Your solution here
 
-	*/
+    */
+    if (DLListIsEmpty(L2)) {
+        return true;
+    }
+
+    // 分别获取数据的长度
+    DLListNodeP first_1 = (DLListNodeP) L1->first;
+    DLListNodeP first_2 = (DLListNodeP) L2->first;
+
+    while (first_2 != NULL) {
+        bool exists = false;
+        while (first_1 != NULL) {
+
+            if (first_1->value == first_2->value) {
+
+                exists = true;
+
+            }
+
+            first_1 = first_1->next;
+        }
+
+        if (!exists) {
+            return false;
+        }
+        // next first_2
+        first_2 = first_2->next;
+    }
+
+    return true;
+
 }
 
 

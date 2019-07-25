@@ -8,17 +8,23 @@
 
 #define SIZE 6     // define a symbolic constant
 
-void swap(int array[],int i,int j){
-    int temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
 
-}
 
 void swap_pointer(int* p1,int* p2) {
     int* temp = p1;
     p1 = p2;
     p2 = temp;
+}
+
+
+
+
+
+void swap(int array[],int i,int j){
+    int temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+
 }
 
 /**
